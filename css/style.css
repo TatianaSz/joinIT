@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @font-face {
     font-family: 'basier_circleregular';
-    src: url('basiercircle-regular-webfont.eot');
-    src: url('basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('basiercircle-regular-webfont.woff2') format('woff2'),
-         url('basiercircle-regular-webfont.woff') format('woff'),
-         url('basiercircle-regular-webfont.ttf') format('truetype');
+    src: url('../basiercircle-regular-webfont.eot');
+    src: url('../basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../basiercircle-regular-webfont.woff2') format('woff2'),
+         url('../basiercircle-regular-webfont.woff') format('woff'),
+         url('../basiercircle-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -16,12 +16,15 @@ html {
   }
 html, 
 body {
-    height: 100%;
+    min-height: 100%;
+    overflow-x:hidden;
 }
 a {
     background-color: transparent;
   }
 body{
+    overflow-y:hidden;
+    position:relative;
     margin:0;
     font-family:'basier_circleregular', 'Roboto', sans-serif;
     background: rgb(232,234,245);
@@ -31,12 +34,14 @@ body{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8eaf5",endColorstr="#ffffff",GradientType=1);
 }
 .container{
-    height:100%;
+    margin-top:4rem;
+    max-height:100%;
     display:flex;
     flex-direction:row;
 }
 .title{
-    margin:0 3rem;
+    flex-basis:50%;
+    margin:0 0 0 3rem;
     align-self:center;
 }
 .title__header, .blocks__title{
@@ -54,6 +59,8 @@ body{
 }
 .title__text{
     line-height:1.75rem;
+    padding-right:4rem;
+    margin-bottom:2rem;
 }
 .title__lorem{
 font-size:0.75rem;
@@ -65,13 +72,15 @@ font-size:0.75rem;
     padding: .5rem 1rem;
 }
 .blocks{
-    margin-top:3rem;
+    margin: 0 3rem 0 0rem;
     display:flex;
     flex-direction:row;
+    flex-basis:50%;
     gap:2rem;
 }
 .blocks__column{
     display:grid;
+    grid-template-rows: repeat(2, 1fr);
     gap:1.5rem;
 }
 .blocks__column--sec{
@@ -81,11 +90,16 @@ font-size:0.75rem;
     background-color:#ffffff;
     border:1px solid #e4e4e5;
     border-radius:.25rem;
-    padding:1.5rem;
+    padding:2.5rem 1.5rem 1.5rem 1.5rem;
+    line-height:1.25rem;
 }
 .blocks__icon{
     padding:.75rem;
     border-radius:.25rem;
+   
+}
+.blocks__title{
+    line-height:1.75rem;
 }
 
 .blocks__icon--blue{
@@ -110,17 +124,16 @@ font-size:0.75rem;
 
 .shapes__first{
     position:absolute;
-    bottom:0;
+    top:15rem;
     left:-4.5rem;
     z-index:-1;
     background: rgb(232,234,245);
-    width:40%;
-    height:60%;
+    width:35rem;
+    height:25rem;
     background: -moz-linear-gradient(180deg, rgba(232,234,245,1) 20%, rgba(255,255,255,1) 100%);
     background: -webkit-linear-gradient(180deg, rgba(232,234,245,1) 20%, rgba(255,255,255,1) 100%);
     background: linear-gradient(180deg, rgba(232,234,245,1) 20%, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8eaf5",endColorstr="#ffffff",GradientType=1);
-
     border-radius: 100% 0% 0% 100% / 100% 0% 100% 0% ;
 }
 .shapes__triangle{
