@@ -41,7 +41,7 @@ body{
 }
 .title{
     flex-basis:50%;
-    margin:0 0 0 3rem;
+    margin:0 0rem 3rem 3rem;
     align-self:center;
 }
 .title__header, .blocks__title{
@@ -72,7 +72,7 @@ font-size:0.75rem;
     padding: .5rem 1rem;
 }
 .blocks{
-    margin: 0 3rem 0 0rem;
+    margin: 0 3rem 0 3rem;
     display:flex;
     flex-direction:row;
     flex-basis:50%;
@@ -99,7 +99,11 @@ font-size:0.75rem;
    
 }
 .blocks__title{
-    line-height:1.75rem;
+    line-height:2rem;
+    margin: 2rem 0 .75rem 0 ;
+}
+.blocks__text{
+    margin:0;
 }
 
 .blocks__icon--blue{
@@ -118,8 +122,20 @@ font-size:0.75rem;
     background-color:#e1bee7;
     color:#8e25aa;
 }
-
-
+@media only screen and (max-width: 1000px) {
+    .container{
+        flex-direction:column;
+    }
+    .shapes__first{
+        display:none;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .blocks{
+        flex-direction:column;
+    }
+    
+  }
 
 
 .shapes__first{
@@ -141,6 +157,8 @@ font-size:0.75rem;
     right:-18rem;
     top:-18rem;
     z-index:-1;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     width: 36rem;
     height: 36rem;
@@ -149,4 +167,14 @@ font-size:0.75rem;
     background: -webkit-linear-gradient(90deg, rgba(228,230,246,1) 20%, rgba(255,255,255,0) 100%);
     background: linear-gradient(90deg, rgba(228,230,246,1) 20%, rgba(255,255,255,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e4e6f6",endColorstr="#ffffff",GradientType=1);
+}
+.shapes__smaller{
+    position:absolute;
+    right:10rem;
+    top:15rem;
+    z-index:-1;
+    width: 0;
+    height: 0;
+    border-top: 20rem solid #ebedf7;
+    border-left: 20rem solid transparent;
 }
