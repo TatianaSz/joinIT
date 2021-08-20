@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: 'basier_circleregular';
+    src: url('basiercircle-regular-webfont.eot');
+    src: url('basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('basiercircle-regular-webfont.woff2') format('woff2'),
+         url('basiercircle-regular-webfont.woff') format('woff'),
+         url('basiercircle-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html {
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+  }
+html, 
+body {
+    height: 100%;
+}
+a {
+    background-color: transparent;
+  }
+body{
+    margin:0;
+    font-family:'basier_circleregular', 'Roboto', sans-serif;
+    background: rgb(232,234,245);
+    background: -moz-linear-gradient(180deg, rgba(232,234,245,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(232,234,245,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(232,234,245,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8eaf5",endColorstr="#ffffff",GradientType=1);
+}
+.container{
+    display:flex;
+    flex-direction:row;
+}
+.title__header, .blocks__title{
+    color:#1a237e;
+}
+.title__header{
+    font-size:3rem;
+}
+.title__header--bright{
+    color:#314efe;
+}
+.blocks__text, .title__lorem, .title__text{
+    color:#7986cb;
+}
+.text__action{
+    background-color:#ffab02;
+    color:#fff8eb;
+}
+.blocks{
+    display:flex;
+    flex-direction:row;
+}
+.blocks__column{
+    display:grid;
+}
+.blocks__element{
+    background-color:#ffffff;
+    border:1px solid #e4e4e5;
+    padding:1.5rem;
+}
