@@ -19,9 +19,6 @@ body {
     min-height: 100%;
     overflow-x:hidden;
 }
-a {
-    background-color: transparent;
-  }
 body{
     overflow-y:hidden;
     position:relative;
@@ -72,7 +69,7 @@ font-size:0.75rem;
     padding: .5rem 1rem;
 }
 .blocks{
-    margin: 0 3rem 0 3rem;
+    margin: 0 3rem 3rem 3rem;
     display:flex;
     flex-direction:row;
     flex-basis:50%;
@@ -80,7 +77,7 @@ font-size:0.75rem;
 }
 .blocks__column{
     display:grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(15rem, max-content));
     gap:1.5rem;
 }
 .blocks__column--sec{
