@@ -31,14 +31,20 @@ body{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8eaf5",endColorstr="#ffffff",GradientType=1);
 }
 .container{
+    height:100%;
     display:flex;
     flex-direction:row;
+}
+.title{
+    margin:0 3rem;
+    align-self:center;
 }
 .title__header, .blocks__title{
     color:#1a237e;
 }
 .title__header{
     font-size:3rem;
+    margin:1rem 0;
 }
 .title__header--bright{
     color:#314efe;
@@ -46,19 +52,88 @@ body{
 .blocks__text, .title__lorem, .title__text{
     color:#7986cb;
 }
+.title__text{
+    line-height:1.75rem;
+}
+.title__lorem{
+font-size:0.75rem;
+}
 .text__action{
     background-color:#ffab02;
     color:#fff8eb;
+    border-radius:.25rem;
+    padding: .5rem 1rem;
 }
 .blocks{
+    margin-top:3rem;
     display:flex;
     flex-direction:row;
+    gap:2rem;
 }
 .blocks__column{
     display:grid;
+    gap:1.5rem;
+}
+.blocks__column--sec{
+    margin-top:1.5rem;
 }
 .blocks__element{
     background-color:#ffffff;
     border:1px solid #e4e4e5;
+    border-radius:.25rem;
     padding:1.5rem;
+}
+.blocks__icon{
+    padding:.75rem;
+    border-radius:.25rem;
+}
+
+.blocks__icon--blue{
+    background-color:#bbdefb;
+    color:#1e88e5;
+}
+.blocks__icon--green{
+    background-color:#c8e6c9;
+    color:#43a048;
+}
+.blocks__icon--yellow{
+    background-color:#fff9c4;
+    color:#f9a825;
+}
+.blocks__icon--purple{
+    background-color:#e1bee7;
+    color:#8e25aa;
+}
+
+
+
+
+.shapes__first{
+    position:absolute;
+    bottom:0;
+    left:-4.5rem;
+    z-index:-1;
+    background: rgb(232,234,245);
+    width:40%;
+    height:60%;
+    background: -moz-linear-gradient(180deg, rgba(232,234,245,1) 20%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(232,234,245,1) 20%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(232,234,245,1) 20%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8eaf5",endColorstr="#ffffff",GradientType=1);
+
+    border-radius: 100% 0% 0% 100% / 100% 0% 100% 0% ;
+}
+.shapes__triangle{
+    position:absolute;
+    right:-18rem;
+    top:-18rem;
+    z-index:-1;
+    transform: rotate(45deg);
+    width: 36rem;
+    height: 36rem;
+    background: rgb(228,230,246);
+    background: -moz-linear-gradient(90deg, rgba(228,230,246,1) 20%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(228,230,246,1) 20%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg, rgba(228,230,246,1) 20%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e4e6f6",endColorstr="#ffffff",GradientType=1);
 }
